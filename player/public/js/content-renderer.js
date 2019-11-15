@@ -347,23 +347,23 @@ org.ekstep.contentrenderer.web = function (id) {
 		})
 }
 
-org.ekstep.contentrenderer.device = function () {
-	var globalconfig = EkstepRendererAPI.getGlobalConfig()
-	var isMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))
-	if (!isbrowserpreview && isMobile) {
-		if (globalconfig.metadata) {
-			org.ekstep.contentrenderer.setContentMetadata(globalconfig.metadata, function () {
-				org.ekstep.contentrenderer.startGame(content.metadata)
-			})
-		} else {
-			org.ekstep.contentrenderer.getContentMetadata(globalconfig.contentId, function () {
-				org.ekstep.contentrenderer.startGame(content.metadata)
-			})
-		}
-	} else {
-		org.ekstep.contentrenderer.startGame(GlobalContext.config.appInfo)
-	}
-}
+// org.ekstep.contentrenderer.device = function () {
+// 	var globalconfig = EkstepRendererAPI.getGlobalConfig()
+// 	var isMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()))
+// 	if (!isbrowserpreview && isMobile) {
+// 		if (globalconfig.metadata) {
+// 			org.ekstep.contentrenderer.setContentMetadata(globalconfig.metadata, function () {
+// 				org.ekstep.contentrenderer.startGame(content.metadata)
+// 			})
+// 		} else {
+// 			org.ekstep.contentrenderer.getContentMetadata(globalconfig.contentId, function () {
+// 				org.ekstep.contentrenderer.startGame(content.metadata)
+// 			})
+// 		}
+// 	} else {
+// 		org.ekstep.contentrenderer.startGame(GlobalContext.config.appInfo)
+// 	}
+// }
 
 org.ekstep.contentrenderer.isStreamingContent = function () {
 	var globalConfig = EkstepRendererAPI.getGlobalConfig()
